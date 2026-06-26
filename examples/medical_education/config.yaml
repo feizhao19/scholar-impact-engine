@@ -1,0 +1,26 @@
+# Medical education cohort example
+#
+# Publications and citations split around training-era boundaries (2016 and 2021).
+# Replace the input file with your own author ID list.
+
+input:
+  file: ../../data/sample_author_ids.csv
+  author_id_column: scopus_id
+
+time_periods:
+  - name: before_2017
+    end: "2016-12-31"
+  - name: period_2017_2021
+    start: "2017-01-01"
+    end: "2021-12-31"
+  - name: after_2021
+    start: "2022-01-01"
+
+citation:
+  start_year: 2000
+  identifier_priority: [doi, pubmed_id]
+
+output:
+  directory: ../../outputs/medical_education
+  basename: impact_metrics
+  formats: [csv, json, xlsx]

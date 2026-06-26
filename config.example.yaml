@@ -1,0 +1,31 @@
+# Copy to config.yaml and adjust paths / time windows for your study.
+
+input:
+  file: data/sample_author_ids.csv
+  author_id_column: scopus_id
+  has_header: true
+  # For a headerless ID list (one Scopus ID per line), use:
+  # has_header: false
+
+# Periods are evaluated in order; each document/citation year is assigned
+# to the first matching period. Periods should not overlap.
+time_periods:
+  - name: before_2017
+    end: "2016-12-31"
+  - name: period_2017_2021
+    start: "2017-01-01"
+    end: "2021-12-31"
+  - name: after_2021
+    start: "2022-01-01"
+
+citation:
+  start_year: 2000
+  identifier_priority: [doi, pubmed_id]
+
+output:
+  directory: outputs
+  basename: impact_metrics
+  formats: [csv, json]
+
+# Optional: limit processing (useful for testing)
+# max_authors: 5

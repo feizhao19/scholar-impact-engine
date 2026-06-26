@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Scopus credentials (use ~/.config/pybliometrics.cfg instead)
+pybliometrics.cfg
+.scopus_api_key
+
+# Outputs and local cohort data
+outputs/
+*.xlsx
+local/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,20 @@
+# Copy to ~/.config/pybliometrics.cfg (Linux/macOS) or %USERPROFILE%\.config\pybliometrics.cfg (Windows)
+# Do not commit real credentials to git.
+
+[Directories]
+AbstractRetrieval = .cache/pybliometrics/AbstractRetrieval
+AuthorRetrieval = .cache/pybliometrics/AuthorRetrieval
+CitationOverview = .cache/pybliometrics/CitationOverview
+
+[Authentication]
+APIKey = YOUR_SCOPUS_API_KEY
+InstToken =
+
+[Proxy]
+http =
+https =
+ftp =
+
+[Requests]
+Timeout = 30
+Retries = 3
